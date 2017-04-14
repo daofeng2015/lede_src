@@ -10,7 +10,6 @@ PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE_URL:=https://github.com/semigodking/cdns.git
 PKG_SOURCE_VERSION:=$(PKG_REV)
-PKG_BUILD_DEPENDS:=argp-standalone
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
@@ -20,7 +19,7 @@ define Package/cdns
 	CATEGORY:=Network
 	TITLE:=CureDNS
 	MAINTAINER:=semigodking
-	DEPENDS:=+libevent2
+	DEPENDS:=+libevent2 +argp-standalone
 endef
 
 define Package/cdns/description
